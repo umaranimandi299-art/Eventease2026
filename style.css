@@ -1,0 +1,290 @@
+
+/* General Settings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #faf9ff;
+    color: #25213b;
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background-color: white;
+}
+
+.logo {
+    font-size: 27px;
+    color: #30245e;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #514d61;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    color: #9065e8;
+}
+
+/* Home Section */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(120deg, #eee8ff, #e9e1ff);
+}
+
+.hero h1 {
+    font-size: 45px;
+    color: #30245e;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 25px;
+    color: #686276;
+}
+
+.primary-button {
+    display: inline-block;
+    padding: 13px 22px;
+    background-color: #7650cf;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+.primary-button:hover {
+    background-color: #5935ad;
+}
+
+/* Events Section */
+.events-section {
+    padding: 60px 8%;
+    text-align: center;
+}
+
+.events-section h2,
+.registration-section h2,
+.attendees-section h2 {
+    color: #30245e;
+    font-size: 30px;
+    margin-bottom: 25px;
+}
+
+/* Search Box */
+#searchInput {
+    width: 100%;
+    max-width: 450px;
+    padding: 13px;
+    margin-bottom: 30px;
+    border: 1px solid #ddd6ef;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+/* Event Cards */
+.event-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.event-card {
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #eee9f8;
+    box-shadow: 0 5px 15px rgba(45, 30, 80, 0.06);
+}
+
+.event-card h3 {
+    color: #30245e;
+    margin-bottom: 15px;
+}
+
+.event-card p {
+    color: #686276;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.event-card button {
+    margin-top: 10px;
+    padding: 11px 18px;
+    background-color: #7650cf;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.event-card button:hover {
+    background-color: #5935ad;
+}
+
+/* Registration Section */
+.registration-section {
+    padding: 60px 8%;
+    background-color: #f3efff;
+    text-align: center;
+}
+
+#registrationForm {
+    max-width: 500px;
+    margin: auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 12px;
+    text-align: left;
+}
+
+#registrationForm label {
+    display: block;
+    margin: 15px 0 8px;
+    font-weight: bold;
+    color: #30245e;
+}
+
+#registrationForm input,
+#registrationForm select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd6ef;
+    border-radius: 8px;
+}
+
+#registrationForm button {
+    width: 100%;
+    padding: 13px;
+    margin-top: 20px;
+    background-color: #7650cf;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#registrationForm button:hover {
+    background-color: #5935ad;
+}
+
+#formMessage {
+    margin-top: 15px;
+    text-align: center;
+}
+
+/* Attendees Section */
+.attendees-section {
+    padding: 60px 8%;
+    text-align: center;
+}
+
+.attendees-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+.attendees-table th {
+    background-color: #7650cf;
+    color: white;
+    padding: 14px;
+}
+
+.attendees-table td {
+    padding: 14px;
+    border-bottom: 1px solid #eee9f8;
+    text-align: left;
+}
+
+/* Delete Button */
+.attendees-table button {
+    padding: 8px 12px;
+    background-color: #7650cf;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* About Section */
+.about-section {
+    padding: 60px 10%;
+    text-align: center;
+    background-color: #eee9fa;
+}
+
+.about-section h2 {
+    color: #30245e;
+    margin-bottom: 15px;
+}
+
+.about-section p {
+    line-height: 1.7;
+    color: #686276;
+}
+
+/* Footer */
+footer {
+    padding: 20px;
+    text-align: center;
+    background-color: #292044;
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .event-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .event-container {
+        grid-template-columns: 1fr;
+    }
+
+    .attendees-section {
+        overflow-x: auto;
+    }
+
+    .attendees-table {
+        min-width: 600px;
+    }
+}

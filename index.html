@@ -1,0 +1,140 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EventEase - Event Registration</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="navbar">
+
+            <h2 class="logo">EventEase</h2>
+
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#register">Register</a></li>
+                <li><a href="#attendees">Attendees</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home" class="hero">
+
+        <h1>Welcome to EventEase</h1>
+
+        <p>Discover Events. Create Memories.</p>
+
+        <a href="#events" class="primary-button">
+            Explore Events
+        </a>
+
+    </section>
+
+    <!-- Events Section -->
+    <section id="events" class="events-section">
+
+        <h2>Upcoming Events</h2>
+
+        <!-- Search Events -->
+        <input type="text" id="searchInput"
+            placeholder="Search events...">
+
+        <!-- Events will be displayed here -->
+        <div class="event-container" id="eventContainer">
+
+        </div>
+
+    </section>
+
+    <!-- Registration Form -->
+    <section id="register" class="registration-section">
+
+        <h2>Event Registration</h2>
+
+        <form id="registrationForm">
+
+            <label for="studentName">Student Name</label>
+            <input type="text" id="studentName"
+                placeholder="Enter your name" required>
+
+            <label for="studentEmail">Email</label>
+            <input type="email" id="studentEmail"
+                placeholder="Enter your email" required>
+
+            <label for="selectedEvent">Select Event</label>
+
+            <select id="selectedEvent" required>
+                <option value="">Choose an event</option>
+            </select>
+
+            <button type="submit">Register Now</button>
+
+            <p id="formMessage"></p>
+
+        </form>
+
+    </section>
+
+    <!-- Registered Attendees -->
+    <section id="attendees" class="attendees-section">
+
+        <h2>Registered Attendees</h2>
+
+        <table class="attendees-table">
+
+            <thead>
+                <tr>
+                    <th>Registration ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Event</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+
+            <tbody id="attendeesList">
+                <tr>
+                    <td colspan="5">No registrations yet.</td>
+                </tr>
+            </tbody>
+
+        </table>
+
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+
+        <h2>About EventEase</h2>
+
+        <p>
+            EventEase is an event registration and ticket booking
+            website. It helps students discover events and register
+            easily.
+        </p>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 EventEase | Team 8</p>
+    </footer>
+
+    <!-- JavaScript File -->
+    <script type="module" src="script.js"></script>
+
+</body>
+</html>
